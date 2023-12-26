@@ -1,3 +1,8 @@
+/* CUSTOM PROPS */
+:root{
+--primary:#EA625C;
+--text-color:#333;
+}
 /* GLOBAL */
 html{
   box-sizing: border-box;
@@ -20,7 +25,8 @@ body {
   line-height: 1.5;
   font-family: "Arial" sans-serif;
   background-color: #fff;
-  color: #222;
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
 }
 img{
   max-width: 100%;
@@ -30,7 +36,7 @@ img{
 /* CONTAINER */
 .container{
 width: 100%;
-max-width: 1200px;
+max-width: 1100px;
 padding-left: 50px;
 padding-right: 50px;
 margin-left: auto;
