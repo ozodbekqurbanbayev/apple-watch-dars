@@ -1,8 +1,8 @@
 /* CUSTOM PROPS */
 :root{
---primary:#EA625C;
---primary-dark:#c9514c;
---text-color:#333;
+  --primary:#EA625C;
+  --primary-dark:#c9514c;
+  --text-color:#333;
 }
 /* GLOBAL */
 html{
@@ -35,41 +35,68 @@ img{
 
 }
 *:focus{
-outline: 2px dashed var(--primary);
-outline-offset: 2px;
+  outline: 2px dashed var(--primary);
+  outline-offset: 2px;
 }
 
 /* BUTTON */
 .button {
-
+min-width: 260px;
+text-align: center;
   font-size: 18px;
   line-height: 1.5;
   font-weight: bold;
-padding: 12px 38px;
-border: 0;
+  padding: 12px 38px;
+  border: 0;
   background-color: var(--primary);
   color: #fff;
   text-transform: uppercase;
-display: inline-block;
-text-decoration: none;
-transition:background-color 0.3s ease ;
+  display: inline-block;
+  text-decoration: none;
+  transition:background-color 0.3s ease ;
 
 }
 .button:hover{
-background-color: var(--primary-dark);
+  background-color: var(--primary-dark);
 
 }
 .button:active{
   opacity: 0.6;
 }
+
+/* BUTTON */
+.lined-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: bold;
+text-transform: uppercase;
+transition: width 0.3s ease;
+
+
+}
+.lined-link::before{
+  margin-right: 10px;
+  content:"";
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary)
+
+}
+.lined-link:hover::before{
+  width: 60px;
+}
 /* CONTAINER */
 .container{
-width: 100%;
-max-width: 1100px;
-padding-left: 50px;
-padding-right: 50px;
-margin-left: auto;
-margin-right: auto;
+  width: 100%;
+  max-width: 1100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* MAIN CONTENT */
 .main-content{
@@ -78,8 +105,8 @@ margin-right: auto;
 
 /* SITE-HEADER */
 .site-header {
-padding-top: 30px;
-padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .site-header-container {
   display: flex;
@@ -90,7 +117,7 @@ padding-bottom: 30px;
   margin-right: auto;
 }
 .site-header-logo:hover{
-opacity: 0.8;
+  opacity: 0.8;
 }
 .site-header-logo:active{
   opacity: 0.6;
@@ -104,15 +131,15 @@ opacity: 0.8;
 
 /* SITENAV */
 .sitenav {
-margin-right: 40px;
-transition: opacity 0.3s ease;
+  margin-right: 40px;
+  transition: opacity 0.3s ease;
 }
 .sitenav-list {
   display: flex;
   align-items:center;
-padding: 0;
-margin: 0;
-list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
 }
 .sitenav-item:not(:last-child){
@@ -138,8 +165,8 @@ list-style: none;
 .search-form-input {
   padding-top: 6px;
   padding-bottom: 6px;
-border: 0;
-border-bottom: 1px solid #333;
+  border: 0;
+  border-bottom: 1px solid #333;
 }
 
 /* HERO */
@@ -151,15 +178,15 @@ border-bottom: 1px solid #333;
 
   background-image: url(../img/watch-red.jpg);
   background-repeat: no-repeat;
-background-position: left calc(50% + 550px) bottom;
-border-bottom: 2px solid #ddd;
+  background-position: left calc(50% + 550px) bottom;
+  border-bottom: 2px solid #ddd;
 
 }
 
 /* LEAD-CTA */
 .lead-cta {
-width: 100%;
-max-width: 490px;
+  width: 100%;
+  max-width: 490px;
 }
 .lead-cta-heading {
   margin-top: 0;
@@ -177,6 +204,97 @@ max-width: 490px;
 
 }
 
+/* FEATURES */
+.features {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.features-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.features-item {
+  width: 280px;
+}
+.features-item:not(:last-child){
+  margin-right: 80px;
+}
+.features-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #222;
+
+}
+.features-text {
+  margin-top: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 20px;
+
+
+}
+.features-divider {
+  width: 8px;
+  height: 8px;
+
+  border: 0;
+  margin: 0;
+  background-color:#ddd;
+  box-shadow: 16px 0 0 0 #ddd , 32px 0 0 0 #ddd ;
+
+
+}
+
+/* PROMO */
+.promo {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+
+}
+.promo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.promo-img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* RUNNERS */
+.runners {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url(../img/footer-orqa-fon.jpg);
+  background-position: center center;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.runners-lead-cta {
+  margin-left: auto;
+}
+.runners-white{
+  color: #fff;
+}
+.runners-white-border{
+  color: #fff;
+  border-left: 3px solid #fff;
+}
+
+
 /* RETINA BG */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -185,7 +303,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-.hero{
-  background-image: url(../img/watch-red@2x.jpg);
-}
+  .hero{
+    background-image: url(../img/watch-red@2x.jpg);
+  }
 }
